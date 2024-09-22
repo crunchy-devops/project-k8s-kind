@@ -10,12 +10,12 @@
 3. **Access** the Nginx web server to confirm it's working.
 4. #### Part 2: Use a ConfigMap for Custom Configuration
 1. **Create a ConfigMap** named `nginx-config` that contains a custom `index.html` file with the following content:
-   ```
-<html>
-<head><title>Welcome to My Nginx Server</title></head>
-<body><h1>Hello from Nginx!</h1></body>
-</html>
-   ```
+```html
+    <html>
+    <head><title>Welcome to My Nginx Server</title></head>
+    <body><h1>Hello from Nginx!</h1></body>
+    </html>
+```
 1. **Modify the original Pod definition** to mount the ConfigMap as a volume so that Nginx serves the custom `index.html`.
 2. **Reapply** the modified Pod definition to update the Pod.
 3. **Access** the Nginx server again and verify that it serves the custom content
